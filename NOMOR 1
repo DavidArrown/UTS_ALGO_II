@@ -1,0 +1,79 @@
+//David Arrown
+//226064516097
+
+//Deklarasi pacakage untuk membuat sebuah program
+package UTS;
+//Mengimpor fungsi keyboard yang bisa digunakan untuk membuat program
+import java.util.Scanner;
+//Deklarasi nama program yang akan dibuat
+public class UTS_ALGO_ii {
+
+    //entry point dari sebuah program jika tidak memiliki fungsi main program tidak akan berjalan
+    public static void main(String[] args) {
+        //membuat variabel yang akan digunakan pada program
+        int nilai_a;
+        int nilai_b;
+        String operator;
+        int hasil;
+        
+        //membuat scanner dengan nama input
+        Scanner input = new Scanner(System.in);
+        //Tampilan output ke user
+        System.out.print("MASUKAN NILAI A : ");
+        //memasukan nilai menggunakan keyboard untuk menyiman nilai yang diketik
+        nilai_a = input.nextInt();
+        //Tampilan output ke user 
+        System.out.print("MASUKAN NILAI B : ");
+        //memasukan nilai menggunakan keyboard untuk menyiman nilai yang diketik
+        nilai_b = input.nextInt();
+        
+        //Tampilan output ke user 
+        System.out.print("Masukan operaator : ");
+        //memasukan nilai menggunakan keyboard untuk menyiman nilai yang diketik
+        operator = input.next();
+        
+        //menjalankan program swicth sesuai dengan pilihn dari variabel sebelumnya
+        switch(operator){
+            case "+":
+            hasil = nilai_a+nilai_b;
+            //tampilan output ke user penjumlahan
+            System.out.println("input : " + nilai_a + "+" + nilai_b);
+            //tampilan hasil akhir yang sudah disimpan di variabel
+            System.out.print("Hasil : " + hasil);
+            //memerintahkan komputer untuk berhenti mengecek case yang lain
+            break;
+            
+            case"-":
+            hasil = nilai_a-nilai_b;
+            //tampilan output ke user pengurangan
+            System.out.println("input : " + nilai_a + "-" + nilai_b);
+            //tampilan hasil akhir yang sudah disimpan di variabel
+            System.out.print("Hasil : " + hasil);
+            //memerintahkan komputer untuk berhenti mengecek case yang lain
+            break;
+            
+            case"*":
+            hasil = nilai_a*nilai_b;
+            //tampilan output ke user perkalian
+            System.out.println("input : " + nilai_a + "*" + nilai_b);
+            //tampilan hasil akhir yang sudah disimpan di variabel
+            System.out.print("Hasil : " + hasil);
+            //memerintahkan komputer untuk berhenti mengecek case yang lain
+            break;
+            
+            case"/":
+            hasil = nilai_a/nilai_b;
+            //tampilan output ke user pembagian
+            System.out.println("input : " + nilai_a + "/" + nilai_b);
+            //tampilan hasil akhir yang sudah disimpan di variabel
+            System.out.print("Hasil : " + hasil);
+            //memerintahkan komputer untuk berhenti mengecek case yang lain
+            break;
+            /*nilai variabel tidak ada yang sama dengan pilihan case, 
+            maka dikerjakan kode yang ada di dalam default*/
+            default:
+            //tampilan output default ke user
+            System.out.print("Inputan Salah");
+        }
+    }
+}
