@@ -1,0 +1,71 @@
+//David Arrown
+//227064516097
+package UTS;
+import java.util.Scanner;
+public class uts_algo {
+
+    public static void main(String[] args) {
+         System.out.println("## COLDPLAY MUSIC of the SPHERES ##");
+         System.out.println("========== WORLD TOUR ==========");
+         System.out.println("GELORA BUNG KARNO STADIUM JAKARTA\n");
+
+        System.out.println("Kategori tiket yang tersedia:");
+        System.out.println("1. Category 1 (Rp5.000.000)");
+        System.out.println("2. Category 2 (Rp4.000.000)");
+        System.out.println("3. Category 3 (Rp3.250.000)");
+        System.out.println("4. Category 4 (Rp2.500.000)");
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Pilih kategori tiket (1-4): ");
+        int kategori = scanner.nextInt();
+
+        System.out.print("Masukkan jumlah tiket yang ingin dibeli: ");
+        int jumlah_tiket = scanner.nextInt();
+
+        String pil_kategori;
+        int harga;
+
+        switch (kategori) {
+            case 1:
+                pil_kategori = "Category 1";
+                harga = 5000000;
+                break;
+            case 2:
+                pil_kategori = "Category 2";
+                harga = 4000000;
+                break;
+            case 3:
+                pil_kategori = "Category 3";
+                harga = 3250000;
+                break;
+            case 4:
+                pil_kategori = "Category 4";
+                harga = 2500000;
+                break;
+            default:
+                System.out.println("Kategori tiket yang dipilih tidak valid.");
+                return;
+        }
+
+        int total_harga = harga * jumlah_tiket;
+
+        System.out.println("=============================================");
+        System.out.println("INVOICE PEMBELIAN");
+        System.out.println("=============================================");
+        System.out.println("Kategori Tiket: " + pil_kategori);
+        System.out.println("Jumlah Tiket : " + jumlah_tiket);
+        System.out.println("Harga Tiket : Rp" + total_harga);
+        System.out.println("=============================================");
+
+        System.out.print("Masukkan jumlah uang yang akan dibayarkan:Rp ");
+        int bayar = scanner.nextInt();
+
+        int change = bayar - total_harga;
+
+        System.out.println("Kembalian : Rp" + change);
+        System.out.println("=============================================");
+
+    }
+    
+}
